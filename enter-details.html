@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enter Details</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: 'Roboto', Arial, sans-serif;
+            background-color: #f1e3c3;
+            color: #333;
+        }
+        h1, h2, h3 {
+            color: #d94f5d;
+            text-transform: uppercase;
+        }
+        .custom-table {
+            background-color: #e7ad96;
+        }
+        .custom-table th, .custom-table td {
+            color: #333;
+        }
+        .btn-custom-primary {
+            background-color: #d08082;
+            border-color: #d08082;
+            height: 38px;
+            color: white;
+            border-radius: 20px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-custom-primary:hover {
+            background-color: #c46970;
+            border-color: #c46970;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .btn-custom-secondary {
+            background-color: #d94f5d;
+            border-color: #d94f5d;
+            height: 38px;
+            color: white;
+            border-radius: 20px;
+            width: 100%;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, box-shadow 0.3s ease;
+        }
+        .btn-custom-secondary:hover {
+            background-color: #b0404d;
+            border-color: #b0404d;
+            box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+        }
+        .custom-input {
+            border: 1px solid #d94f5d;
+            height: 38px;
+            border-radius: 20px;
+            padding-left: 15px;
+            width: 100%;
+        }
+        .custom-input:focus {
+            border-color: #d08082;
+        }
+        .footer {
+            text-align: center;
+            margin-top: 20px;
+            font-size: 0.9em;
+        }
+        .navbar-custom {
+            background-color: #d94f5d;
+        }
+        .navbar-brand-custom {
+            font-family: 'Roboto', Arial, sans-serif;
+            font-size: 1.5em;
+            color: white !important;
+        }
+        .input-group {
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Enter Your Financial Goals</h2>
+        <form method="POST" action="db.php">
+            <div class="form-group">
+                <label for="current-balance">Current Balance:</label>
+                <input type="number" step="0.01" class="form-control" id="current-balance" name="current_balance" required>
+            </div>
+            <div class="form-group">
+                <label for="weekly-income">Weekly Income:</label>
+                <input type="number" step="0.01" class="form-control" id="weekly-income" name="weekly_income" required>
+            </div>
+            <div class="form-group">
+                <label for="target-amount">Target Amount:</label>
+                <input type="number" step="0.01" class="form-control" id="target-amount" name="target_amount" required>
+            </div>
+            <div class="form-group">
+                <label for="deadline-date">Deadline Date:</label>
+                <input type="date" class="form-control" id="deadline-date" name="deadline_date" required>
+            </div>
+            <button type="submit" class="btn btn-primary" name="set_balances">Submit</button>
+        </form>
+        <a href="index.php" class="btn btn-secondary mt-3">Back</a>
+        <a href="expense-income.php" class="btn btn-secondary mt-3">Go to Expense/Income</a>
+    </div>
+</body>
+</html>
